@@ -6,23 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://lijiaminga.top">
-  <title>my | LJM</title>
+  <title>servlet,服务端 | LJM</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="正在检测  李家明  李家明   lijiaming     欢迎到访 很高兴见到你 祝您，早上好，中午好，下午好，晚安。 session.setAttribute(&amp;quot;errMsg&amp;quot;, &amp;quot;用户名已存在&amp;quot;);     response.sendRedirect(&amp;quot;registe.jsp&amp;quot;);  欢迎到访    我学过的编程语言有Linux">
-<meta name="keywords" content="message">
+  <meta name="description" content="servlet实现页面与服务端之间的交互  导入所需要的jar包      c3p0-config.xml文件(用于保存进程池相关参数)  注意c3p0-config.xml文件的位置，在src下     12345678910111213141516171819&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;&amp;lt;c3p0-config&amp;gt;	&amp;lt;">
+<meta name="keywords" content="java_servlet">
 <meta property="og:type" content="article">
-<meta property="og:title" content="my">
-<meta property="og:url" content="https://lijiaminga.top/2018/08/13/my/index.html">
+<meta property="og:title" content="servlet,服务端">
+<meta property="og:url" content="https://lijiaminga.top/2018/08/15/servlet/index.html">
 <meta property="og:site_name" content="LJM">
-<meta property="og:description" content="正在检测  李家明  李家明   lijiaming     欢迎到访 很高兴见到你 祝您，早上好，中午好，下午好，晚安。 session.setAttribute(&amp;quot;errMsg&amp;quot;, &amp;quot;用户名已存在&amp;quot;);     response.sendRedirect(&amp;quot;registe.jsp&amp;quot;);  欢迎到访    我学过的编程语言有Linux">
+<meta property="og:description" content="servlet实现页面与服务端之间的交互  导入所需要的jar包      c3p0-config.xml文件(用于保存进程池相关参数)  注意c3p0-config.xml文件的位置，在src下     12345678910111213141516171819&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;&amp;lt;c3p0-config&amp;gt;	&amp;lt;">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://lijiaminga.top/img/jianhun.jpg">
-<meta property="og:image" content="https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif">
-<meta property="og:updated_time" content="2018-08-14T05:44:39.448Z">
+<meta property="og:image" content="https://lijiaminga.top/img/import.png">
+<meta property="og:updated_time" content="2018-08-15T12:04:22.763Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="my">
-<meta name="twitter:description" content="正在检测  李家明  李家明   lijiaming     欢迎到访 很高兴见到你 祝您，早上好，中午好，下午好，晚安。 session.setAttribute(&amp;quot;errMsg&amp;quot;, &amp;quot;用户名已存在&amp;quot;);     response.sendRedirect(&amp;quot;registe.jsp&amp;quot;);  欢迎到访    我学过的编程语言有Linux">
-<meta name="twitter:image" content="https://lijiaminga.top/img/jianhun.jpg">
+<meta name="twitter:title" content="servlet,服务端">
+<meta name="twitter:description" content="servlet实现页面与服务端之间的交互  导入所需要的jar包      c3p0-config.xml文件(用于保存进程池相关参数)  注意c3p0-config.xml文件的位置，在src下     12345678910111213141516171819&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;&amp;lt;c3p0-config&amp;gt;	&amp;lt;">
+<meta name="twitter:image" content="https://lijiaminga.top/img/import.png">
   
     <link rel="alternative" href="/atom.xml" title="LJM" type="application/atom+xml">
   
@@ -156,80 +155,54 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-my" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-servlet" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      my
+      servlet,服务端
     </h1>
   
 
         
-        <a href="/2018/08/13/my/" class="archive-article-date">
-  	<time datetime="2018-08-13T12:04:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-13</time>
+        <a href="/2018/08/15/servlet/" class="archive-article-date">
+  	<time datetime="2018-08-15T11:07:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-15</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="正在检测"><a href="#正在检测" class="headerlink" title="正在检测"></a>正在检测</h1><p><img src="/img/jianhun.jpg" width="1000" div="" align="center"></p>
-<hr>
-<h2 id="李家明"><a href="#李家明" class="headerlink" title="李家明"></a>李家明</h2><hr>
-<ul>
-<li>李家明  <ul>
-<li>lijiaming</li>
-</ul>
-</li>
-</ul>
-<hr>
-<pre><code>欢迎到访
-很高兴见到你
-祝您，早上好，中午好，下午好，晚安。
-session.setAttribute(&quot;errMsg&quot;, &quot;用户名已存在&quot;);
-    response.sendRedirect(&quot;registe.jsp&quot;);
-</code></pre><hr>
-<p><code>欢迎到访</code>  </p>
-<hr>
-<p>我学过的编程语言有<code>Linux</code> <code>网络编程</code> <code>socket</code></p>
-<hr>
-<p><em>斜体</em><br><em>斜体2</em><br><strong>粗体</strong><br><strong><em><del>斜粗体删除线</del></em></strong><br><em><strong>粗斜</strong></em></p>
-<hr>
-<p><img src="https://github.com/guodongxiaren/ImageCache/raw/master/Logo/foryou.gif" alt="图片加载失败" title="百度logo"></p>
-<hr>
-<p>![我的知乎][zhihu]</p>
-<hr>
-<p><a href="https://www.baidu.com" title="百度" target="_blank" rel="noopener">百度</a></p>
-<hr>
-<ol>
-<li>数字<ul>
-<li>嵌套</li>
-</ul>
-</li>
-<li>数字</li>
-<li><h2 id="数字"><a href="#数字" class="headerlink" title="数字"></a>数字</h2><small>文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本</small></li>
-</ol>
-<hr>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th style="text-align:center">说明</th>
-<th style="text-align:left">默认值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>host</td>
-<td style="text-align:center">远程主机的地址</td>
-<td style="text-align:left">false</td>
-</tr>
-</tbody>
-</table>
-<hr>
+        <h2 id="servlet实现页面与服务端之间的交互"><a href="#servlet实现页面与服务端之间的交互" class="headerlink" title="servlet实现页面与服务端之间的交互"></a>servlet实现页面与服务端之间的交互</h2><hr>
+<blockquote>
+<p>导入所需要的jar包  </p>
+</blockquote>
+<p><img src="/img/import.png" alt=""></p>
+<blockquote>
+<p>c3p0-config.xml文件(用于保存进程池相关参数)</p>
+<blockquote>
+<p>注意c3p0-config.xml文件的位置，在src下  </p>
+</blockquote>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=<span class="string">"1.0"</span> encoding=<span class="string">"UTF-8"</span>?&gt;</span><br><span class="line">&lt;c3p0-config&gt;</span><br><span class="line">	&lt;<span class="keyword">default</span>-config&gt;</span><br><span class="line">		&lt;!-- 驱动名 --&gt;</span><br><span class="line">		&lt;property name="driverClass"&gt;com.mysql.jdbc.Driver&lt;/property&gt;</span><br><span class="line">		&lt;!--数据库url  --&gt;</span><br><span class="line">		&lt;property name=<span class="string">"jdbcUrl"</span>&gt;jdbc:mysql:<span class="comment">//localhost:3306/day107&lt;/property&gt;</span></span><br><span class="line">		&lt;!--用户名  --&gt;</span><br><span class="line">		&lt;property name="user"&gt;root&lt;/property&gt;</span><br><span class="line">		&lt;!--密码  --&gt;</span><br><span class="line">		&lt;property name="password"&gt;root&lt;/property&gt;</span><br><span class="line">		&lt;!-- 初始化时创建的连接数 --&gt;</span><br><span class="line">		&lt;property name="initialPoolSize"&gt;6&lt;/property&gt;</span><br><span class="line">		&lt;!-- 最大连接数 --&gt;</span><br><span class="line">		&lt;property name="maxPoolSize"&gt;100&lt;/property&gt;</span><br><span class="line">		&lt;!--最大空闲时间  --&gt;</span><br><span class="line">		&lt;property name="maxIdleTime"&gt;1000&lt;/property&gt;</span><br><span class="line">	&lt;/default-config&gt;</span><br><span class="line">&lt;/c3p0-config&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>index.jsp(首页)  </p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	</span><br><span class="line">	<span class="tag">&lt;<span class="name">%</span></span></span><br><span class="line"><span class="tag">		<span class="attr">String</span> <span class="attr">name</span>=<span class="string">(String)session.getAttribute(</span>"<span class="attr">name</span>");</span></span><br><span class="line"><span class="tag">	<span class="attr">if</span>(<span class="attr">name</span>!=<span class="string">null)&#123;</span></span></span><br><span class="line"><span class="tag">		<span class="attr">out.print</span>(<span class="attr">name</span>);</span></span><br><span class="line"><span class="tag">		<span class="attr">session.removeAttribute</span>("<span class="attr">name</span>");</span></span><br><span class="line"><span class="tag">	&#125;<span class="attr">else</span>&#123;</span></span><br><span class="line">		out.print("&lt;a href='login.jsp'&gt;登录&lt;/a&gt;");</span><br><span class="line">	&#125;</span><br><span class="line">	%&gt;</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>login.jsp(登录页面)  </p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">%</span></span></span><br><span class="line"><span class="tag">        //取出会话中携带的数据</span></span><br><span class="line"><span class="tag">		<span class="attr">String</span> <span class="attr">msg</span>=<span class="string">(String)session.getAttribute(</span>"<span class="attr">lerr</span>");</span></span><br><span class="line"><span class="tag">		//判断是否是首次加载，首次加载<span class="attr">session</span>中没有<span class="attr">lerr</span>数值</span></span><br><span class="line"><span class="tag">		<span class="attr">if</span>(<span class="attr">msg</span>!=<span class="string">null)&#123;</span></span></span><br><span class="line"><span class="tag">			<span class="attr">out.print</span>(<span class="attr">msg</span>);</span></span><br><span class="line"><span class="tag">			//也可以在里面删除会话携带的<span class="attr">lerr</span>，这样每次刷新之后也不会显示提示信息</span></span><br><span class="line"><span class="tag">			//<span class="attr">session.removeAttribute</span>("<span class="attr">lerr</span>");</span></span><br><span class="line"><span class="tag">		&#125;</span></span><br><span class="line"><span class="tag">		/*错误信息在提示完成后 可以直接删除，避免重复提示 */</span></span><br><span class="line"><span class="tag">		<span class="attr">session.removeAttribute</span>("<span class="attr">lerr</span>");</span></span><br><span class="line"><span class="tag">	%&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--使用form表单提交给LoginServlet  --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"LoginServlet"</span> <span class="attr">method</span>=<span class="string">"get"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">label</span>&gt;</span>用户名:<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">required</span> &gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">label</span>&gt;</span>密&amp;#x3000;码:<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">required</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span> </span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"登录"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"register.jsp"</span>&gt;</span>还没有账号，点这去注册<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>register.jsp(注册页面)  </p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">%</span></span></span><br><span class="line"><span class="tag">		<span class="attr">String</span> <span class="attr">msg</span>=<span class="string">(String)session.getAttribute(</span>"<span class="attr">rerr</span>");</span></span><br><span class="line"><span class="tag">		<span class="attr">if</span>(<span class="attr">msg</span>!=<span class="string">null)&#123;</span></span></span><br><span class="line"><span class="tag">			<span class="attr">out.print</span>(<span class="attr">msg</span>);</span></span><br><span class="line"><span class="tag">			<span class="attr">session.removeAttribute</span>("<span class="attr">rerr</span>");</span></span><br><span class="line"><span class="tag">		&#125;</span></span><br><span class="line"><span class="tag">	%&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--使用form表单提交给RegisterServlet  --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"RegisterServlet"</span> <span class="attr">method</span>=<span class="string">"get"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">label</span>&gt;</span>用户名:<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">required</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">label</span>&gt;</span>密&amp;#x3000;码:<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">required</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">		性&amp;#x3000;别:</span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex"</span> <span class="attr">checked</span> <span class="attr">value</span>=<span class="string">"male"</span>&gt;</span>男</span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex"</span> <span class="attr">value</span>=<span class="string">"femal"</span>&gt;</span>女<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"注册"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">```  </span><br><span class="line">&gt;LoginServlet.java(新建文件是选servlet)</span><br><span class="line">&gt;&gt;在dogGet方法中写一下代码  </span><br><span class="line"></span><br><span class="line">```java</span><br><span class="line">//设置请求编码格式</span><br><span class="line">		request.setCharacterEncoding("utf-8");</span><br><span class="line">		//回去请求参数</span><br><span class="line">		String name=request.getParameter("username");</span><br><span class="line">		String pwd=request.getParameter("password");</span><br><span class="line">		//创建一个连接池对象</span><br><span class="line">		ComboPooledDataSource dataSource=new ComboPooledDataSource();</span><br><span class="line">		//定义一个connection类型的变量，用来存取出来的连接</span><br><span class="line">		Connection connection=null;</span><br><span class="line">		PreparedStatement statement=null;</span><br><span class="line">		//用于保存查询出来的结果</span><br><span class="line">		ResultSet set=null;</span><br><span class="line">		//获取一个会话對象</span><br><span class="line">		HttpSession session=request.getSession();</span><br><span class="line">		try &#123;</span><br><span class="line">			connection=dataSource.getConnection();</span><br><span class="line">			//使用格式化的形式，准备sql语句</span><br><span class="line">			String sql="select password from users where username=?";</span><br><span class="line">			statement=connection.prepareStatement(sql);</span><br><span class="line">			statement.setString(1, name);</span><br><span class="line">			//只是用于检测，这两行代码无实际意义。</span><br><span class="line">			System.out.println(name);</span><br><span class="line">			System.out.println(sql);</span><br><span class="line">			//开始查询</span><br><span class="line">			set=statement.executeQuery();</span><br><span class="line">			//判断 用户名是否存在</span><br><span class="line">			if(set.next())&#123;</span><br><span class="line">				String password=set.getString("password");</span><br><span class="line">				//判断密码是否正确。</span><br><span class="line">				if(password.equals(pwd))&#123;</span><br><span class="line">					//给session设置属性，可以在本次会话中使用</span><br><span class="line">					session.setAttribute("name", "欢迎"+name);</span><br><span class="line">					//重定向到，index.jsp页面</span><br><span class="line">					response.sendRedirect("index.jsp");</span><br><span class="line">				&#125;else&#123;</span><br><span class="line">					session.setAttribute("lerr", "密码错误，请重新登录");</span><br><span class="line">					response.sendRedirect("login.jsp");</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;else&#123;</span><br><span class="line">				session.setAttribute("lerr", "该用户不存在，请重新登录");</span><br><span class="line">				response.sendRedirect("login.jsp");</span><br><span class="line">			&#125;</span><br><span class="line">		&#125; catch (SQLException e) &#123;</span><br><span class="line">			// TODO Auto-generated catch block</span><br><span class="line">			e.printStackTrace();</span><br><span class="line">		&#125;finally &#123;</span><br><span class="line">			try &#123;</span><br><span class="line">				//关闭</span><br><span class="line">				//由于关闭时节能会产生错误，所以要加到try中</span><br><span class="line">				set.close();</span><br><span class="line">				statement.close();</span><br><span class="line">				connection.close();</span><br><span class="line">			&#125; catch (SQLException e) &#123;</span><br><span class="line">				// TODO Auto-generated catch block</span><br><span class="line">				e.printStackTrace();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>RegisterServlet.java  </p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">request.setCharacterEncoding(<span class="string">"utf-8"</span>);</span><br><span class="line">		String name=request.getParameter(<span class="string">"username"</span>);</span><br><span class="line">		String pwd=request.getParameter(<span class="string">"password"</span>);</span><br><span class="line">		String sex=request.getParameter(<span class="string">"sex"</span>);</span><br><span class="line">		System.out.println(name+pwd+sex);</span><br><span class="line">		ComboPooledDataSource dataSource=<span class="keyword">new</span> ComboPooledDataSource();</span><br><span class="line">		Connection connection=<span class="keyword">null</span>;</span><br><span class="line">		PreparedStatement statement=<span class="keyword">null</span>;</span><br><span class="line">		HttpSession session=request.getSession();</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			connection=dataSource.getConnection();</span><br><span class="line">			String sql=<span class="string">"insert into users values(?,?,?)"</span>;</span><br><span class="line">			statement=connection.prepareStatement(sql);</span><br><span class="line">			statement.setString(<span class="number">1</span>, name);</span><br><span class="line">			statement.setString(<span class="number">2</span>, pwd);</span><br><span class="line">			statement.setString(<span class="number">3</span>, sex);</span><br><span class="line">			<span class="comment">//插入，刪除，修改通称为修改，使用executeUpdate()方法</span></span><br><span class="line">			<span class="keyword">int</span> number=statement.executeUpdate();</span><br><span class="line">			System.out.println(sql);</span><br><span class="line">			System.out.println(number);</span><br><span class="line">			session.setAttribute(<span class="string">"rerr"</span>, <span class="string">"注册成功，请登录"</span>);</span><br><span class="line">			session.removeAttribute(<span class="string">"rerr"</span>);</span><br><span class="line">			response.sendRedirect(<span class="string">"login.jsp"</span>);</span><br><span class="line">		&#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">			<span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">			e.printStackTrace();</span><br><span class="line">			session.setAttribute(<span class="string">"rerr"</span>, <span class="string">"用户名已存在"</span>);</span><br><span class="line">			response.sendRedirect(<span class="string">"register.jsp"</span>);</span><br><span class="line">		&#125;<span class="keyword">finally</span> &#123;</span><br><span class="line">			<span class="keyword">try</span> &#123;</span><br><span class="line">				statement.close();</span><br><span class="line">				connection.close();</span><br><span class="line">			&#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">				<span class="comment">// TODO Auto-generated catch block</span></span><br><span class="line">				e.printStackTrace();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure>
 
       
 
@@ -274,7 +247,7 @@ session.setAttribute(&quot;errMsg&quot;, &quot;用户名已存在&quot;);
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">message</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">java_servlet</a>
         		</li>
       		
 		</ul>
@@ -330,7 +303,7 @@ session.setAttribute(&quot;errMsg&quot;, &quot;用户名已存在&quot;);
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://lijiaminga.top/2018/08/13/my/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://lijiaminga.top/2018/08/15/servlet/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -344,15 +317,11 @@ session.setAttribute(&quot;errMsg&quot;, &quot;用户名已存在&quot;);
   
 <nav id="article-nav">
   
-    <a href="/2018/08/15/servlet/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          servlet,服务端
-        
-      </div>
-    </a>
   
+    <a href="/2018/08/13/my/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">my</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
