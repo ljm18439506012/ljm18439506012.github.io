@@ -218,132 +218,132 @@
 </blockquote>
 <p><img src="/img2/jstl.png" alt="">  </p>
 <p>并在jstl.jsp文件中添加下列代码:  </p>
-<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ taglib prefix=<span class="string">"c"</span> uri=<span class="string">"http://java.sun.com/jsp/jstl/core"</span> %&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%@</span> <span class="attr">taglib</span> <span class="attr">prefix</span>=<span class="string">"c"</span> <span class="attr">uri</span>=<span class="string">"http://java.sun.com/jsp/jstl/core"</span> %&gt;</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>然后就是写代码(<strong>jstl常用标签的用法</strong>)  </p>
 </blockquote>
-<pre><code class="jsp">&lt;%<span class="meta">@page</span> <span class="keyword">import</span>=<span class="string">"java.util.ArrayList"</span>%&gt;
-&lt;%<span class="meta">@page</span> <span class="keyword">import</span>=<span class="string">"com.zhiyou.po.People"</span>%&gt;
-&lt;%@ page language=<span class="string">"java"</span> contentType=<span class="string">"text/html; charset=UTF-8"</span>
-    pageEncoding=<span class="string">"UTF-8"</span>%&gt;
-    &lt;!--这句是关键  --&gt;
-&lt;%@ taglib prefix=<span class="string">"c"</span> uri=<span class="string">"http://java.sun.com/jsp/jstl/core"</span> %&gt;
-&lt;!DOCTYPE html PUBLIC <span class="string">"-//W3C//DTD HTML 4.01 Transitional//EN"</span> <span class="string">"http://www.w3.org/TR/html4/loose.dtd"</span>&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta http-equiv=<span class="string">"Content-Type"</span> content=<span class="string">"text/html; charset=UTF-8"</span>&gt;
-&lt;title&gt;Insert title here&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;%
-    request.setAttribute(<span class="string">"name"</span>, <span class="string">"李四"</span>);
-    request.setAttribute(<span class="string">"age"</span>, <span class="number">15</span>);
-    request.setAttribute(<span class="string">"people"</span>, <span class="keyword">new</span> People(<span class="string">"王五"</span>,<span class="number">12</span>,<span class="keyword">true</span>));
-    System.out.print(<span class="string">"我是\"周一"</span>);
+<pre><code class="html"><span class="tag">&lt;<span class="name">%@page</span> <span class="attr">import</span>=<span class="string">"java.util.ArrayList"</span>%&gt;</span>
+<span class="tag">&lt;<span class="name">%@page</span> <span class="attr">import</span>=<span class="string">"com.zhiyou.po.People"</span>%&gt;</span>
+<span class="tag">&lt;<span class="name">%@</span> <span class="attr">page</span> <span class="attr">language</span>=<span class="string">"java"</span> <span class="attr">contentType</span>=<span class="string">"text/html; charset=UTF-8"</span></span>
+<span class="tag">    <span class="attr">pageEncoding</span>=<span class="string">"UTF-8"</span>%&gt;</span>
+    <span class="comment">&lt;!--这句是关键  --&gt;</span>
+<span class="tag">&lt;<span class="name">%@</span> <span class="attr">taglib</span> <span class="attr">prefix</span>=<span class="string">"c"</span> <span class="attr">uri</span>=<span class="string">"http://java.sun.com/jsp/jstl/core"</span> %&gt;</span>
+<span class="meta">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</span>
+<span class="tag">&lt;<span class="name">html</span>&gt;</span>
+<span class="tag">&lt;<span class="name">head</span>&gt;</span>
+<span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=UTF-8"</span>&gt;</span>
+<span class="tag">&lt;<span class="name">title</span>&gt;</span>Insert title here<span class="tag">&lt;/<span class="name">title</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">head</span>&gt;</span>
+<span class="tag">&lt;<span class="name">body</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">%</span></span>
+<span class="tag">    <span class="attr">request.setAttribute</span>("<span class="attr">name</span>", "李四");</span>
+<span class="tag">    <span class="attr">request.setAttribute</span>("<span class="attr">age</span>", <span class="attr">15</span>);</span>
+<span class="tag">    <span class="attr">request.setAttribute</span>("<span class="attr">people</span>", <span class="attr">new</span> <span class="attr">People</span>("王五",<span class="attr">12</span>,<span class="attr">true</span>));</span>
+<span class="tag">    <span class="attr">System.out.print</span>("我是\"周一");</span>
+<span class="tag"></span>
+    ArrayList&lt;People&gt; peoples=new ArrayList&lt;&gt;();
+    peoples.add(new People("张三",15,true));
+    peoples.add(new People("张四",12,true));
+    peoples.add(new People("张五",18,true));
 
-    ArrayList&lt;People&gt; peoples=<span class="keyword">new</span> ArrayList&lt;&gt;();
-    peoples.add(<span class="keyword">new</span> People(<span class="string">"张三"</span>,<span class="number">15</span>,<span class="keyword">true</span>));
-    peoples.add(<span class="keyword">new</span> People(<span class="string">"张四"</span>,<span class="number">12</span>,<span class="keyword">true</span>));
-    peoples.add(<span class="keyword">new</span> People(<span class="string">"张五"</span>,<span class="number">18</span>,<span class="keyword">true</span>));
-
-    request.setAttribute(<span class="string">"peoples"</span>, peoples);
+    request.setAttribute("peoples", peoples);
     %&gt;
-    &lt;c:out value="哈哈哈"&gt;&lt;/c:out&gt;
-    &lt;c:out value="${name}" default="空值" escapeXml="false"&gt;&lt;/c:out&gt;
-    &lt;c:out value="&lt;p&gt;这是一个段落&lt;/p&gt;"&gt;&lt;/c:out&gt;
-    &lt;!--excaprXml:是否转换输出。默认是转换；
-        <span class="keyword">false</span>:不转。
-      --&gt;
-    &lt;c:out value="&lt;a href='http://www.baidu.com'&gt;百度&lt;/a&gt;" escapeXml="false"&gt;&lt;/c:out&gt;
-    &lt;!--实体 ，也叫转义 --&gt;
+    <span class="tag">&lt;<span class="name">c:out</span> <span class="attr">value</span>=<span class="string">"哈哈哈"</span>&gt;</span><span class="tag">&lt;/<span class="name">c:out</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">c:out</span> <span class="attr">value</span>=<span class="string">"${name}"</span> <span class="attr">default</span>=<span class="string">"空值"</span> <span class="attr">escapeXml</span>=<span class="string">"false"</span>&gt;</span><span class="tag">&lt;/<span class="name">c:out</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">c:out</span> <span class="attr">value</span>=<span class="string">"&lt;p&gt;这是一个段落&lt;/p&gt;"</span>&gt;</span><span class="tag">&lt;/<span class="name">c:out</span>&gt;</span>
+    <span class="comment">&lt;!--excaprXml:是否转换输出。默认是转换；</span>
+<span class="comment">        false:不转。</span>
+<span class="comment">      --&gt;</span>
+    <span class="tag">&lt;<span class="name">c:out</span> <span class="attr">value</span>=<span class="string">"&lt;a href='http://www.baidu.com'&gt;百度&lt;/a&gt;"</span> <span class="attr">escapeXml</span>=<span class="string">"false"</span>&gt;</span><span class="tag">&lt;/<span class="name">c:out</span>&gt;</span>
+    <span class="comment">&lt;!--实体 ，也叫转义 --&gt;</span>
     &amp;lt;a&amp;gt;
-    &lt;!--c:set可以 往四大作用域存数据。
-        value：值
-        var:key,名称；
-        scope：作用域。
+    <span class="comment">&lt;!--c:set可以 往四大作用域存数据。</span>
+<span class="comment">        value：值</span>
+<span class="comment">        var:key,名称；</span>
+<span class="comment">        scope：作用域。</span>
+<span class="comment"></span>
+<span class="comment">        c:out：往页面输出数据</span>
+<span class="comment">        value：数据；</span>
+<span class="comment">        default：value为null是的默认值</span>
+<span class="comment">        escapeXml:是否转义；</span>
+<span class="comment">      --&gt;</span>
+    <span class="tag">&lt;<span class="name">c:set</span> <span class="attr">value</span>=<span class="string">"小白"</span> <span class="attr">var</span>=<span class="string">"nickname"</span> <span class="attr">scope</span>=<span class="string">"request"</span>&gt;</span><span class="tag">&lt;/<span class="name">c:set</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">c:out</span> <span class="attr">value</span>=<span class="string">"${nickname }"</span>&gt;</span><span class="tag">&lt;/<span class="name">c:out</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">c:out</span> <span class="attr">value</span>=<span class="string">"${requestScope.nickname} "</span>&gt;</span><span class="tag">&lt;/<span class="name">c:out</span>&gt;</span>
 
-        c:out：往页面输出数据
-        value：数据；
-        <span class="keyword">default</span>：value为<span class="keyword">null</span>是的默认值
-        escapeXml:是否转义；
-      --&gt;
-    &lt;c:set value="小白" var="nickname" scope="request"&gt;&lt;/c:set&gt;
-    &lt;c:out value="${nickname }"&gt;&lt;/c:out&gt;
-    &lt;c:out value="${requestScope.nickname} "&gt;&lt;/c:out&gt;
+    <span class="comment">&lt;!--c:set:也可以修改作用域中的数据</span>
+<span class="comment">        value：新值；</span>
+<span class="comment">        target：要修改的目标</span>
+<span class="comment">        property：要修改的属性    </span>
+<span class="comment">      --&gt;</span>
+    <span class="tag">&lt;<span class="name">c:out</span> <span class="attr">value</span>=<span class="string">"${people.name }"</span>&gt;</span><span class="tag">&lt;/<span class="name">c:out</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">c:set</span> <span class="attr">value</span>=<span class="string">"王哈哈"</span> <span class="attr">target</span>=<span class="string">"${people}"</span> <span class="attr">property</span>=<span class="string">"name"</span>&gt;</span><span class="tag">&lt;/<span class="name">c:set</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">c:out</span> <span class="attr">value</span>=<span class="string">"${people.name }"</span>&gt;</span><span class="tag">&lt;/<span class="name">c:out</span>&gt;</span>
 
-    &lt;!--c:set:也可以修改作用域中的数据
-        value：新值；
-        target：要修改的目标
-        property：要修改的属性    
-      --&gt;
-    &lt;c:out value="${people.name }"&gt;&lt;/c:out&gt;
-    &lt;c:set value="王哈哈" target="${people}" property="name"&gt;&lt;/c:set&gt;
-    &lt;c:out value="${people.name }"&gt;&lt;/c:out&gt;
+    <span class="tag">&lt;<span class="name">c:out</span> <span class="attr">value</span>=<span class="string">"${name}"</span>&gt;</span><span class="tag">&lt;/<span class="name">c:out</span>&gt;</span>
+    <span class="comment">&lt;!-- </span>
+<span class="comment">    c:remove:从作用域中删除 数据</span>
+<span class="comment">    var:删除数据的key</span>
+<span class="comment">     --&gt;</span>
+    &lt;%-- &lt;c:remove var="name"/&gt; --%&gt;
+    <span class="tag">&lt;<span class="name">c:out</span> <span class="attr">value</span>=<span class="string">"${name}"</span>&gt;</span><span class="tag">&lt;/<span class="name">c:out</span>&gt;</span>
+    <span class="comment">&lt;!--</span>
+<span class="comment">    c:catch:捕获异常;</span>
+<span class="comment">        var:将错误信息写入作用域，对应的key </span>
+<span class="comment">     --&gt;</span>
+    <span class="tag">&lt;<span class="name">c:catch</span> <span class="attr">var</span>=<span class="string">"err"</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">c:set</span> <span class="attr">value</span>=<span class="string">"ha"</span> <span class="attr">target</span>=<span class="string">"${people}"</span> <span class="attr">property</span>=<span class="string">"nickname"</span>&gt;</span><span class="tag">&lt;/<span class="name">c:set</span>&gt;</span>
+    <span class="tag">&lt;/<span class="name">c:catch</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">br</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">c:out</span> <span class="attr">value</span>=<span class="string">"${err }"</span>&gt;</span><span class="tag">&lt;/<span class="name">c:out</span>&gt;</span>
+    <span class="comment">&lt;!--</span>
+<span class="comment">    c:if:条件语句；</span>
+<span class="comment">        test：判断条件。</span>
+<span class="comment">      --&gt;</span>
+    <span class="tag">&lt;<span class="name">c:if</span> <span class="attr">test</span>=<span class="string">"${empty(name) }"</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">c:out</span> <span class="attr">value</span>=<span class="string">"&lt;a href='login.jsp'&gt;登录&lt;/a&gt;"</span> <span class="attr">escapeXml</span>=<span class="string">"false"</span>&gt;</span><span class="tag">&lt;/<span class="name">c:out</span>&gt;</span>
+    <span class="tag">&lt;/<span class="name">c:if</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">c:if</span> <span class="attr">test</span>=<span class="string">"${!empty(name) }"</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">c:out</span> <span class="attr">value</span>=<span class="string">"${name}"</span>&gt;</span><span class="tag">&lt;/<span class="name">c:out</span>&gt;</span>
+    <span class="tag">&lt;/<span class="name">c:if</span>&gt;</span>
 
-    &lt;c:out value="${name}"&gt;&lt;/c:out&gt;
-    &lt;!-- 
-    c:remove:从作用域中删除 数据
-    var:删除数据的key
-     --&gt;
-    &lt;%-- &lt;c:remove var=<span class="string">"name"</span>/&gt; --%&gt;
-    &lt;c:out value="${name}"&gt;&lt;/c:out&gt;
-    &lt;!--
-    c:<span class="keyword">catch</span>:捕获异常;
-        var:将错误信息写入作用域，对应的key 
-     --&gt;
-    &lt;c:<span class="keyword">catch</span> var=<span class="string">"err"</span>&gt;
-        &lt;c:set value="ha" target="${people}" property="nickname"&gt;&lt;/c:set&gt;
-    &lt;/c:catch&gt;
-    &lt;br&gt;
-    &lt;c:out value="${err }"&gt;&lt;/c:out&gt;
-    &lt;!--
-    c:<span class="keyword">if</span>:条件语句；
-        test：判断条件。
-      --&gt;
-    &lt;c:<span class="keyword">if</span> test=<span class="string">"${empty(name) }"</span>&gt;
-        &lt;c:out value="&lt;a href='login.jsp'&gt;登录&lt;/a&gt;" escapeXml="false"&gt;&lt;/c:out&gt;
-    &lt;/c:if&gt;
-    &lt;c:<span class="keyword">if</span> test=<span class="string">"${!empty(name) }"</span>&gt;
-        &lt;c:out value="${name}"&gt;&lt;/c:out&gt;
-    &lt;/c:if&gt;
-
-    &lt;!-- c:chose,c:when,c:otherwise连用相当于<span class="keyword">switch</span>-<span class="keyword">case</span> --&gt;
-    &lt;c:choose&gt;
-     &lt;c:when test=<span class="string">"${age&lt;12}"</span>&gt;
-         &lt;c:out value="儿童"&gt;&lt;/c:out&gt;
-     &lt;/c:when&gt;
-     &lt;c:when test=<span class="string">"${age&lt;=15}"</span>&gt;
-         &lt;c:out value="青少年"&gt;&lt;/c:out&gt;
-     &lt;/c:when&gt;
-     &lt;c:otherwise&gt;
-         &lt;c:out value="成年"&gt;&lt;/c:out&gt;
-     &lt;/c:otherwise&gt;
-    &lt;/c:choose&gt;
-    &lt;!--
-    c:foreach:循环；
-        var：从集合中取出元素命名
-        items：带循环的集合
-        begin:开始索引
-        end:结束索引
-        count：到目前循环了多少次。
-        step：步长
-        varstatus:记录循环了多少次
-        first：是不是第一个元素
-        last：是不是最后一个元素
-      --&gt;
-      &lt;br&gt;
-    &lt;table&gt;
-    &lt;c:forEach var=<span class="string">"p"</span> items=<span class="string">"${peoples}"</span> begin=<span class="string">"0"</span> end=<span class="string">"2"</span> varStatus=<span class="string">"s"</span>&gt;
-        &lt;tr&gt;
-            &lt;td&gt;${s.index}&lt;/td&gt;
-            &lt;td&gt;${p.name}&lt;/td&gt;
-            &lt;td&gt;${p.age}&lt;/td&gt;
-            &lt;td&gt;${p.sex}&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/c:forEach&gt;
-    &lt;/table&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+    <span class="comment">&lt;!-- c:chose,c:when,c:otherwise连用相当于switch-case --&gt;</span>
+    <span class="tag">&lt;<span class="name">c:choose</span>&gt;</span>
+     <span class="tag">&lt;<span class="name">c:when</span> <span class="attr">test</span>=<span class="string">"${age&lt;12}"</span>&gt;</span>
+         <span class="tag">&lt;<span class="name">c:out</span> <span class="attr">value</span>=<span class="string">"儿童"</span>&gt;</span><span class="tag">&lt;/<span class="name">c:out</span>&gt;</span>
+     <span class="tag">&lt;/<span class="name">c:when</span>&gt;</span>
+     <span class="tag">&lt;<span class="name">c:when</span> <span class="attr">test</span>=<span class="string">"${age&lt;=15}"</span>&gt;</span>
+         <span class="tag">&lt;<span class="name">c:out</span> <span class="attr">value</span>=<span class="string">"青少年"</span>&gt;</span><span class="tag">&lt;/<span class="name">c:out</span>&gt;</span>
+     <span class="tag">&lt;/<span class="name">c:when</span>&gt;</span>
+     <span class="tag">&lt;<span class="name">c:otherwise</span>&gt;</span>
+         <span class="tag">&lt;<span class="name">c:out</span> <span class="attr">value</span>=<span class="string">"成年"</span>&gt;</span><span class="tag">&lt;/<span class="name">c:out</span>&gt;</span>
+     <span class="tag">&lt;/<span class="name">c:otherwise</span>&gt;</span>
+    <span class="tag">&lt;/<span class="name">c:choose</span>&gt;</span>
+    <span class="comment">&lt;!--</span>
+<span class="comment">    c:foreach:循环；</span>
+<span class="comment">        var：从集合中取出元素命名</span>
+<span class="comment">        items：带循环的集合</span>
+<span class="comment">        begin:开始索引</span>
+<span class="comment">        end:结束索引</span>
+<span class="comment">        count：到目前循环了多少次。</span>
+<span class="comment">        step：步长</span>
+<span class="comment">        varstatus:记录循环了多少次</span>
+<span class="comment">        first：是不是第一个元素</span>
+<span class="comment">        last：是不是最后一个元素</span>
+<span class="comment">      --&gt;</span>
+      <span class="tag">&lt;<span class="name">br</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">table</span>&gt;</span>
+    <span class="tag">&lt;<span class="name">c:forEach</span> <span class="attr">var</span>=<span class="string">"p"</span> <span class="attr">items</span>=<span class="string">"${peoples}"</span> <span class="attr">begin</span>=<span class="string">"0"</span> <span class="attr">end</span>=<span class="string">"2"</span> <span class="attr">varStatus</span>=<span class="string">"s"</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">tr</span>&gt;</span>
+            <span class="tag">&lt;<span class="name">td</span>&gt;</span>${s.index}<span class="tag">&lt;/<span class="name">td</span>&gt;</span>
+            <span class="tag">&lt;<span class="name">td</span>&gt;</span>${p.name}<span class="tag">&lt;/<span class="name">td</span>&gt;</span>
+            <span class="tag">&lt;<span class="name">td</span>&gt;</span>${p.age}<span class="tag">&lt;/<span class="name">td</span>&gt;</span>
+            <span class="tag">&lt;<span class="name">td</span>&gt;</span>${p.sex}<span class="tag">&lt;/<span class="name">td</span>&gt;</span>
+        <span class="tag">&lt;/<span class="name">tr</span>&gt;</span>
+    <span class="tag">&lt;/<span class="name">c:forEach</span>&gt;</span>
+    <span class="tag">&lt;/<span class="name">table</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="name">html</span>&gt;</span>
 </code></pre>
 <hr>
 
@@ -510,7 +510,7 @@
 <hr>
 <blockquote>
 <h2 id="使用el表达式传递数据的例子和注意事项"><a href="#使用el表达式传递数据的例子和注意事项" class="headerlink" title="使用el表达式传递数据的例子和注意事项"></a>使用el表达式传递数据的例子和注意事项</h2></blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">	<span class="comment">&lt;!-- el:expression language 表达式语言，用于js页面。</span></span><br><span class="line"><span class="comment">		可以快速的从四大作用域对象(pageContext,request,session,application)中获取数据</span></span><br><span class="line"><span class="comment">			如果不指定哪个作用域取值，默认顺去是pagecontent，request，session，application;</span></span><br><span class="line"><span class="comment">			可以指定从哪个作用域取值。</span></span><br><span class="line"><span class="comment">		支持算数运算，逻辑运算。</span></span><br><span class="line"><span class="comment">	 --&gt;</span></span><br><span class="line">```  </span><br><span class="line">---</span><br><span class="line">```jsp</span><br><span class="line"></span><br><span class="line">	 <span class="tag">&lt;<span class="name">%</span></span></span><br><span class="line"><span class="tag">	 	<span class="attr">pageContext.setAttribute</span>("<span class="attr">name</span>", "张三");</span></span><br><span class="line"><span class="tag">	 	<span class="attr">request.setAttribute</span>("<span class="attr">age</span>", <span class="attr">18</span>);</span></span><br><span class="line"><span class="tag">	 	<span class="attr">session.setAttribute</span>("<span class="attr">sex</span>", "<span class="attr">male</span>");</span></span><br><span class="line"><span class="tag">	 	<span class="attr">application.setAttribute</span>("<span class="attr">nickname</span>", "李四");</span></span><br><span class="line"><span class="tag">	 	<span class="attr">request.setAttribute</span>("<span class="attr">name</span>", "王五");</span></span><br><span class="line"><span class="tag">	 	</span></span><br><span class="line">	 	ArrayList&lt;People&gt; arraylist=new ArrayList&lt;&gt;();</span><br><span class="line">	 	arraylist.add(new People("张三",15,true));</span><br><span class="line">	 	arraylist.add(new People("张四",12,true));</span><br><span class="line">	 	arraylist.add(new People("张五",18,true));</span><br><span class="line">	 	</span><br><span class="line">	 	request.setAttribute("peoples", arraylist);</span><br><span class="line">	 	</span><br><span class="line">	 	HashMap<span class="tag">&lt;<span class="name">String,String</span>&gt;</span> hashmap=new HashMap<span class="tag">&lt;&gt;</span>();</span><br><span class="line">	 	hashmap.put("username", "张三");</span><br><span class="line">	 	hashmap.put("password","123456");</span><br><span class="line">	 	request.setAttribute("login", hashmap);</span><br><span class="line">	 	</span><br><span class="line">	 	People p=new People("李明",18,false);</span><br><span class="line">	 	</span><br><span class="line">	 	request.setAttribute("people",p);</span><br><span class="line">	 %&gt;</span><br><span class="line">	 <span class="tag">&lt;<span class="name">h2</span>&gt;</span>$&#123;name &#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">	 <span class="tag">&lt;<span class="name">h2</span>&gt;</span>$&#123;name2 &#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">	 <span class="tag">&lt;<span class="name">h2</span>&gt;</span>$&#123;requestScope.name &#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">	 <span class="tag">&lt;<span class="name">h2</span>&gt;</span>$&#123;numbers[1]&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">	 <span class="tag">&lt;<span class="name">h2</span>&gt;</span>$&#123;login.username &#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">	 <span class="tag">&lt;<span class="name">h2</span>&gt;</span>$&#123;login.username &#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">	 <span class="tag">&lt;<span class="name">h2</span>&gt;</span>$&#123;numbers[2].name&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">	 </span><br><span class="line">	 <span class="comment">&lt;!--empty:判断是否为空  --&gt;</span></span><br><span class="line">	 <span class="tag">&lt;<span class="name">h2</span>&gt;</span>$&#123;empty(peoples)&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">	 <span class="comment">&lt;!--支持三目运算符  --&gt;</span></span><br><span class="line">	 <span class="tag">&lt;<span class="name">h2</span>&gt;</span>$&#123;age&gt;18? "成年":"未成年" &#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">	 <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"1"</span> $&#123; <span class="attr">checked</span> =<span class="string">age</span>&gt;</span>18 ? 'checked':''&#125; &gt;成年</span><br><span class="line">	 &lt;input type="radio" name="1" $&#123; checked =age&lt;=18 ? 'checked':''&#125; &gt;未成年</span><br><span class="line">	 </span><br><span class="line">	 <span class="comment">&lt;!-- 支持逻辑运算还有数学运算 --&gt;</span></span><br><span class="line">	 <span class="tag">&lt;<span class="name">h2</span>&gt;</span>$&#123;age ge 18&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">	 <span class="tag">&lt;<span class="name">h2</span>&gt;</span>$&#123;1+2&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- el:expression language 表达式语言，用于js页面。</span></span><br><span class="line"><span class="comment">	可以快速的从四大作用域对象(pageContext,request,session,application)中获取数据</span></span><br><span class="line"><span class="comment">		如果不指定哪个作用域取值，默认顺去是pagecontent，request，session，application;</span></span><br><span class="line"><span class="comment">		可以指定从哪个作用域取值。</span></span><br><span class="line"><span class="comment">	支持算数运算，逻辑运算。</span></span><br><span class="line"><span class="comment"> --&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> <span class="tag">&lt;<span class="name">%</span></span></span><br><span class="line"><span class="tag"> 	<span class="attr">pageContext.setAttribute</span>("<span class="attr">name</span>", "张三");</span></span><br><span class="line"><span class="tag"> 	<span class="attr">request.setAttribute</span>("<span class="attr">age</span>", <span class="attr">18</span>);</span></span><br><span class="line"><span class="tag"> 	<span class="attr">session.setAttribute</span>("<span class="attr">sex</span>", "<span class="attr">male</span>");</span></span><br><span class="line"><span class="tag"> 	<span class="attr">application.setAttribute</span>("<span class="attr">nickname</span>", "李四");</span></span><br><span class="line"><span class="tag"> 	<span class="attr">request.setAttribute</span>("<span class="attr">name</span>", "王五");</span></span><br><span class="line"><span class="tag"> 	</span></span><br><span class="line"> 	ArrayList&lt;People&gt; arraylist=new ArrayList&lt;&gt;();</span><br><span class="line"> 	arraylist.add(new People("张三",15,true));</span><br><span class="line"> 	arraylist.add(new People("张四",12,true));</span><br><span class="line"> 	arraylist.add(new People("张五",18,true));</span><br><span class="line"> 	</span><br><span class="line"> 	request.setAttribute("peoples", arraylist);</span><br><span class="line"> 	</span><br><span class="line"> 	HashMap<span class="tag">&lt;<span class="name">String,String</span>&gt;</span> hashmap=new HashMap<span class="tag">&lt;&gt;</span>();</span><br><span class="line"> 	hashmap.put("username", "张三");</span><br><span class="line"> 	hashmap.put("password","123456");</span><br><span class="line"> 	request.setAttribute("login", hashmap);</span><br><span class="line"> 	</span><br><span class="line"> 	People p=new People("李明",18,false);</span><br><span class="line"> 	</span><br><span class="line"> 	request.setAttribute("people",p);</span><br><span class="line"> %&gt;</span><br><span class="line"> <span class="tag">&lt;<span class="name">h2</span>&gt;</span>$&#123;name &#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">h2</span>&gt;</span>$&#123;name2 &#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">h2</span>&gt;</span>$&#123;requestScope.name &#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">h2</span>&gt;</span>$&#123;numbers[1]&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">h2</span>&gt;</span>$&#123;login.username &#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">h2</span>&gt;</span>$&#123;login.username &#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">h2</span>&gt;</span>$&#123;numbers[2].name&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"> </span><br><span class="line"> <span class="comment">&lt;!--empty:判断是否为空  --&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">h2</span>&gt;</span>$&#123;empty(peoples)&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"> <span class="comment">&lt;!--支持三目运算符  --&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">h2</span>&gt;</span>$&#123;age&gt;18? "成年":"未成年" &#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"1"</span> $&#123; <span class="attr">checked</span> =<span class="string">age</span>&gt;</span>18 ? 'checked':''&#125; &gt;成年</span><br><span class="line"> &lt;input type="radio" name="1" $&#123; checked =age&lt;=18 ? 'checked':''&#125; &gt;未成年</span><br><span class="line"> </span><br><span class="line"> <span class="comment">&lt;!-- 支持逻辑运算还有数学运算 --&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">h2</span>&gt;</span>$&#123;age ge 18&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">h2</span>&gt;</span>$&#123;1+2&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
       
 
@@ -613,13 +613,13 @@
 <li>login.jsp(登录页面)  </li>
 </ol>
 </blockquote>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">&lt;h2&gt;</span><br><span class="line">    &lt;%</span><br><span class="line">        <span class="comment">//取出会话中携带的数据</span></span><br><span class="line">		String msg=(String)session.getAttribute(<span class="string">"lerr"</span>);</span><br><span class="line">		<span class="comment">//判断是否是首次加载，首次加载session中没有lerr数值</span></span><br><span class="line">		<span class="keyword">if</span>(msg!=<span class="keyword">null</span>)&#123;</span><br><span class="line">			out.print(msg);</span><br><span class="line">			<span class="comment">//也可以在里面删除会话携带的lerr，这样每次刷新之后也不会显示提示信息</span></span><br><span class="line">			<span class="comment">//session.removeAttribute("lerr");</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">/*错误信息在提示完成后 可以直接删除，避免重复提示 */</span></span><br><span class="line">		session.removeAttribute(<span class="string">"lerr"</span>);</span><br><span class="line">	%&gt;</span><br><span class="line">    &lt;/h2&gt;</span><br><span class="line">    &lt;!--使用form表单提交给LoginServlet  --&gt;</span><br><span class="line">	&lt;form action=<span class="string">"LoginServlet"</span> method=<span class="string">"get"</span>&gt;</span><br><span class="line">		&lt;label&gt;用户名:&lt;/label&gt;&lt;input type="text" name="username" required &gt;&lt;br&gt;&lt;br&gt;</span><br><span class="line">		&lt;label&gt;密&amp;#x3000;码:&lt;/label&gt;&lt;input type="password" name="password" required&gt;&lt;br&gt;&lt;br&gt; </span><br><span class="line">		&lt;input type=<span class="string">"submit"</span> value=<span class="string">"登录"</span>&gt;</span><br><span class="line">	&lt;/form&gt;</span><br><span class="line">		&lt;a href="register.jsp"&gt;还没有账号，点这去注册&lt;/a&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">%</span></span></span><br><span class="line"><span class="tag">        //取出会话中携带的数据</span></span><br><span class="line"><span class="tag">		<span class="attr">String</span> <span class="attr">msg</span>=<span class="string">(String)session.getAttribute(</span>"<span class="attr">lerr</span>");</span></span><br><span class="line"><span class="tag">		//判断是否是首次加载，首次加载<span class="attr">session</span>中没有<span class="attr">lerr</span>数值</span></span><br><span class="line"><span class="tag">		<span class="attr">if</span>(<span class="attr">msg</span>!=<span class="string">null)&#123;</span></span></span><br><span class="line"><span class="tag">			<span class="attr">out.print</span>(<span class="attr">msg</span>);</span></span><br><span class="line"><span class="tag">			//也可以在里面删除会话携带的<span class="attr">lerr</span>，这样每次刷新之后也不会显示提示信息</span></span><br><span class="line"><span class="tag">			//<span class="attr">session.removeAttribute</span>("<span class="attr">lerr</span>");</span></span><br><span class="line"><span class="tag">		&#125;</span></span><br><span class="line"><span class="tag">		/*错误信息在提示完成后 可以直接删除，避免重复提示 */</span></span><br><span class="line"><span class="tag">		<span class="attr">session.removeAttribute</span>("<span class="attr">lerr</span>");</span></span><br><span class="line"><span class="tag">	%&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--使用form表单提交给LoginServlet  --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"LoginServlet"</span> <span class="attr">method</span>=<span class="string">"get"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">label</span>&gt;</span>用户名:<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">required</span> &gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">label</span>&gt;</span>密&amp;#x3000;码:<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">required</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span> </span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"登录"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"register.jsp"</span>&gt;</span>还没有账号，点这去注册<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <ol start="5">
 <li>register.jsp(注册页面)  </li>
 </ol>
 </blockquote>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">&lt;h2&gt;</span><br><span class="line">	&lt;%</span><br><span class="line">		String msg=(String)session.getAttribute(<span class="string">"rerr"</span>);</span><br><span class="line">		<span class="keyword">if</span>(msg!=<span class="keyword">null</span>)&#123;</span><br><span class="line">			out.print(msg);</span><br><span class="line">			session.removeAttribute(<span class="string">"rerr"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	%&gt;</span><br><span class="line">    &lt;/h2&gt;</span><br><span class="line">    &lt;!--使用form表单提交给RegisterServlet  --&gt;</span><br><span class="line">	&lt;form action=<span class="string">"RegisterServlet"</span> method=<span class="string">"get"</span>&gt;</span><br><span class="line">		&lt;label&gt;用户名:&lt;/label&gt;&lt;input type="text" name="username" required&gt;&lt;br&gt;&lt;br&gt;</span><br><span class="line">		&lt;label&gt;密&amp;#x3000;码:&lt;/label&gt;&lt;input type="password" name="password" required&gt;&lt;br&gt;&lt;br&gt;</span><br><span class="line">		性&amp;#x3000;别:</span><br><span class="line">		&lt;input type=<span class="string">"radio"</span> name=<span class="string">"sex"</span> checked value=<span class="string">"male"</span>&gt;男</span><br><span class="line">		&lt;input type=<span class="string">"radio"</span> name=<span class="string">"sex"</span> value=<span class="string">"femal"</span>&gt;女&lt;br&gt;</span><br><span class="line">	&lt;input type=<span class="string">"submit"</span> value=<span class="string">"注册"</span>&gt;</span><br><span class="line">	&lt;/form&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">%</span></span></span><br><span class="line"><span class="tag">		<span class="attr">String</span> <span class="attr">msg</span>=<span class="string">(String)session.getAttribute(</span>"<span class="attr">rerr</span>");</span></span><br><span class="line"><span class="tag">		<span class="attr">if</span>(<span class="attr">msg</span>!=<span class="string">null)&#123;</span></span></span><br><span class="line"><span class="tag">			<span class="attr">out.print</span>(<span class="attr">msg</span>);</span></span><br><span class="line"><span class="tag">			<span class="attr">session.removeAttribute</span>("<span class="attr">rerr</span>");</span></span><br><span class="line"><span class="tag">		&#125;</span></span><br><span class="line"><span class="tag">	%&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--使用form表单提交给RegisterServlet  --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"RegisterServlet"</span> <span class="attr">method</span>=<span class="string">"get"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">label</span>&gt;</span>用户名:<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">required</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">label</span>&gt;</span>密&amp;#x3000;码:<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">required</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">		性&amp;#x3000;别:</span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex"</span> <span class="attr">checked</span> <span class="attr">value</span>=<span class="string">"male"</span>&gt;</span>男</span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"sex"</span> <span class="attr">value</span>=<span class="string">"femal"</span>&gt;</span>女<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"注册"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <ol start="6">
 <li>LoginServlet.java(新建文件是选servlet)<blockquote>
